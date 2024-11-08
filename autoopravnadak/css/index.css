@@ -1,153 +1,171 @@
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f9f9f9;
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+    color: #333;
+}
 
-        nav {
-            background-color: #292b2c;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
-        nav .logo {
-            margin: 0 20px;
-            font-size: x-large;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
+nav {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav ul li {
-            margin: 0 20px;
-        }
+nav .logo {
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
 
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
+nav .logo:hover {
+    transform: rotate(15deg);
+}
 
-        nav ul li a:hover {
-            color: #f4a300;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        header {
-            background: url('images/auto-repair-banner.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-            color: black;
-        }
+nav ul li a:hover {
+    color: #f0a500;
+    transform: scale(1.1);
+}
 
-        header p {
-            font-size: 1.3rem;
-            color: black;
-        }
+/* Hlavička stránky */
+header {
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+}
 
-        section {
-            padding: 4rem 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(24, 24, 24);
+}
 
-        section h2 {
-            font-size: 2.5rem;
-            color: #292b2c;
-            margin-bottom: 1rem;
-        }
+header h1, header p {
+    position: relative;
+    z-index: 1;  /*výška na ose z */
+}
 
-        section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #444;
-        }
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #f0a500;
+    animation: fadeIn 1s ease-in-out;
+}
 
-        .about-us {
-            text-align: justify;
-        }
+header p {
+    font-size: 1.3rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
 
-        .about-us p {
-            margin-bottom: 1rem;
-        }
+/* Sekce */
+section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
 
-        .about-us a {
-            color: 	#f4a300;
-            text-decoration: none;
-        }
 
-        .cta {
-            background-color: #292b2c;
-            color: white;
-            text-align: center;
-            padding: 3rem;
-            margin: auto;
-        }
 
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
+section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
 
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-        }
+.about-us {
+    text-align: justify;
+}
 
-        .cta a:hover {
-            background-color: #e59400;
-        }
+.about-us p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
 
-        footer {
-            background-color: #292b2c;
-            color: #e59400;
-            text-align: center;
-            padding: 1rem 0;
-        }
+.about-us a {
+    color: #f0a500;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        footer p {
-            margin: 0.5rem 0;
-            color: #e59400;
-        }
+.about-us a:hover {
+    text-decoration: underline;
+}
 
-        #parallax {
-    
-            background-image: url(../img/zach-zook-0yoKiuukRQg-unsplash.jpg);
-            height: 300px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        #parallax .content {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            padding: 0 2rem;       
-        }
+/* Sekce CTA */
+.cta {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    margin: auto;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f0a500;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Parallax sekce */
+#parallax {
+    background-image:url(../img/zach-zook-0yoKiuukRQg-unsplash.jpg);
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Patka stránky */
+footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    color: #ffffff;
+}
+
         
       
     

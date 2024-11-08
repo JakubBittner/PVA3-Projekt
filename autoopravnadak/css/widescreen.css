@@ -1,0 +1,30 @@
+
+body {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section h2{
+    text-align: center;
+    color: orange;
+
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+

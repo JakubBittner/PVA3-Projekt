@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-    background-color: #292b2c;
+    background-color: #1f1f1f;
     padding: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -15,8 +15,12 @@ nav {
 }
 
 nav .logo {
-    margin: 0 20px;
-    font-size: x-large;
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+nav .logo:hover {
+    transform: rotate(15deg);
 }
 
 nav ul {
@@ -43,7 +47,7 @@ nav ul li a:hover {
 header {
     text-align: center;
     padding: 3rem;
-    background-color: #303233;
+    background: rgb(24, 24, 24);
     color: white;
 }
 
@@ -51,6 +55,7 @@ header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     font-weight: 700;
+    color: #f0a500;
 }
 
 header p {
@@ -96,7 +101,7 @@ section p {
 }
 
 footer {
-    background-color: #303233;
+    background: rgb(24, 24, 24);
     color: white;
     text-align: center;
     padding: 2rem 0;
